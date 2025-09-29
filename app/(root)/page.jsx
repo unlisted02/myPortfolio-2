@@ -11,11 +11,8 @@ import Link from "next/link";
 
 // components
 import Button from "@/components/Button";
-import Me from "@/public/image/Kuria.png";
-import MeAbout from "@/public/image/meAbout.jpg";
-import Setup from "@/public/image/setup.jpg";
-import ProjectAll from "@/public/image/projects.png";
 import Hr from "@/components/Hr";
+
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -39,24 +36,25 @@ const MyPage = () => {
 				render={({ state, fullpageApi }) => (
 					<ReactFullpage.Wrapper>
 						<div className="section">
-							<div className="mx-auto container grid grid-cols-1 md:grid-cols-3 gap-4 p-10 overflow-hidden md:px-20">
+							<div className="container grid grid-cols-1 gap-4 p-10 mx-auto overflow-hidden md:grid-cols-3 md:px-20">
 								<motion.div
-									className="col-span-2 flex flex-col justify-center items-center md:items-start text-center md:text-start"
+									className="flex flex-col items-center justify-center col-span-2 text-center md:items-start md:text-start"
 									initial={{ x: -100, opacity: 0 }}
 									whileInView={{ x: 0, opacity: 1 }}
 									transition={{
 										type: "spring",
 									}}>
-									<div className="block md:hidden col-span-1 mx-auto my-10">
-										<div className="bg-slate-500 rounded-full h-60 w-60 grayscale hover:grayscale-0 transition-all ease duration-300">
-											<Image
-												src={Me}
-												width={500}
-												height={500}
-												className="rounded-full w-full h-full object-cover "
-												alt="Kuria"
-												placeholder="blur"
-											/>
+									<div className="block col-span-1 mx-auto my-10 md:hidden">
+										<div className="transition-all duration-300 rounded-full bg-slate-500 h-60 w-60 grayscale hover:grayscale-0 ease">
+										<Image
+											src="/image/Kuria.png"
+											width={500}
+											height={500}
+											className="object-cover w-full h-full rounded-full "
+											alt="Kuria"
+											placeholder="blur"
+											blurDataURL="/image/placeholder/blur.jpg"
+										/>
 										</div>
 									</div>
 									<motion.h3
@@ -70,7 +68,7 @@ const MyPage = () => {
 										Michael Kuria
 									</motion.h3>
 									<motion.h1
-										className="text-black text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5"
+										className="my-2 text-5xl font-bold text-black md:text-6xl lg:text-7xl 2xl:text-8xl md:my-5"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -80,21 +78,37 @@ const MyPage = () => {
 										Full Stack Developer
 									</motion.h1>
 									<motion.p
-										className="title text-md  2xl:text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem]"
+										className="mb-4 text-lg font-medium text-gray-600"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
 											delay: 0.4,
 											type: "spring",
 										}}>
-										Hi! I&rsquo;am Kuria, A  fullstack developer specializing in
-										modern Web Development with a growing focus on Artificial
-										Intelligence. Passionate about building scalable,
-										user-friendly web applications and exploring AI technologies
-										such as generative models and LLM integration.
+										🚀 Building the future with code • Available for opportunities
 									</motion.p>
 									<motion.div
-										className="buttons flex flex-row justify-center items-center space-x-4 mt-10"
+										className="mt-4"
+										initial={{ x: -100, opacity: 0 }}
+										whileInView={{ x: 0, opacity: 1 }}
+										transition={{
+											delay: 0.4,
+											type: "spring",
+										}}>
+										<p className="title text-md 2xl:text-xl tracking-wider text-gray-500 leading-[1.7rem] mb-3">
+											Hi! I'm Kuria, a passionate full-stack developer with 3+ years of experience building 
+											scalable web applications and AI-powered solutions. I've successfully delivered 
+											<span className="font-semibold text-gray-700"> 15+ projects</span> serving 
+											<span className="font-semibold text-gray-700"> 500+ users</span> across various industries.
+										</p>
+										<p className="title text-md 2xl:text-xl tracking-wider text-gray-500 leading-[1.7rem]">
+											Specializing in modern web technologies with a growing focus on Artificial Intelligence, 
+											I love creating user-friendly applications that solve real-world problems. Currently exploring 
+											generative models, LLM integration, and building the next generation of intelligent applications.
+										</p>
+									</motion.div>
+									<motion.div
+										className="flex flex-row items-center justify-center mt-10 space-x-4 buttons"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -102,11 +116,14 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										<Button variation="primary">
-											<Link
+											<a
 												href="https://drive.google.com/uc?export=download&id=1pPDQttrsXLI3NFlOl5r0Y9cWu-eE0uh5"
-												download="MICHAEL C.V.pdf">
-												Download CV
-											</Link>
+												download="MICHAEL_KURIA_CV.pdf"
+												target="_blank"
+												rel="noopener noreferrer"
+												className="flex items-center gap-2">
+												📄 Download CV
+											</a>
 										</Button>
 										<Button variation="secondary">
 											<a href="#contact">Contact Me</a>
@@ -114,28 +131,30 @@ const MyPage = () => {
 									</motion.div>
 								</motion.div>
 								<motion.div
-									className="hidden md:flex col-span-1 mx-auto justify-center items-center "
+									className="items-center justify-center hidden col-span-1 mx-auto md:flex "
 									initial={{ x: 100, opacity: 0 }}
 									whileInView={{ x: 0, opacity: 1 }}
 									transition={{
 										delay: 0.7,
 										type: "spring",
 									}}>
-									<div className="rounded-full h-auto w-auto  lg:px-12 grayscale hover:grayscale-0 transition-all ease duration-300">
+									<div className="w-auto h-auto transition-all duration-300 rounded-full lg:px-12 grayscale hover:grayscale-0 ease">
 										<Image
-											src={Me}
+											src="/image/Kuria.png"
 											width={400}
 											height={550}
 											placeholder="blur"
+											blurDataURL="/image/placeholder/blur.jpg"
 											alt="Kuria"
-											className="rounded-full w-full h-full object-cover"
+											className="object-cover w-full h-full rounded-full"
 										/>
 									</div>
 								</motion.div>
 							</div>
 						</div>
+						
 						<div className="section">
-							<div className="relative md:h-screen w-screen gap-4 flex justify-center items-center flex-col overflow-hidden">
+							<div className="relative flex flex-col items-center justify-center w-screen gap-4 overflow-hidden md:h-screen">
 								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 									<motion.div
 										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
@@ -156,17 +175,18 @@ const MyPage = () => {
 											damping: 20,
 										}}>
 										<Image
-											src={MeAbout}
+											src="/image/mike.jpg"
 											layout="fill"
 											className="object-cover"
 											alt="Kuria"
 											placeholder="blur"
+											blurDataURL="/image/placeholder/blur.jpg"
 										/>
 									</motion.div>
 								</div>
 								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
 									<motion.h1
-										className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
+										className="px-3 text-5xl font-bold text-black bg-white bg-opacity-50 lg:bg-transparent md-px-0 md:text-8xl"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -201,7 +221,7 @@ const MyPage = () => {
 							</div>
 						</div>
 						<div className="section">
-							<div className="relative md:h-screen w-screen gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
+							<div className="relative flex flex-col items-center justify-center w-screen gap-4 p-10 overflow-hidden md:h-screen">
 								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 									<motion.div
 										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 "
@@ -222,17 +242,18 @@ const MyPage = () => {
 											damping: 20,
 										}}>
 										<Image
-											src={ProjectAll}
+											src="/image/projects.png"
 											layout="fill"
 											className="object-cover"
 											alt="Kuria Setup"
 											placeholder="blur"
+											blurDataURL="/image/placeholder/blur.jpg"
 										/>
 									</motion.div>
 								</div>
 								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
 									<motion.h1
-										className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
+										className="px-3 text-5xl font-bold text-black bg-white bg-opacity-50 lg:bg-transparent md-px-0 md:text-8xl"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -251,7 +272,7 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										This is some of my projects that I have done{" "}
-										<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
+										<span className="bg-transparent bg-opacity-50 md:bg-gray-100 xl:bg-transparent">
 											{" "}
 											and currently working on.
 										</span>
@@ -271,7 +292,7 @@ const MyPage = () => {
 							</div>
 						</div>
 						<div className="section">
-							<div className="relative md:h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
+							<div className="relative flex flex-col items-center justify-center w-screen gap-4 p-10 overflow-hidden md:h-screen">
 								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 									<motion.div
 										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
@@ -292,17 +313,18 @@ const MyPage = () => {
 											damping: 20,
 										}}>
 										<Image
-											src={Setup}
+											src="/image/setup.jpg"
 											layout="fill"
 											className="object-cover"
 											alt="Kuria Setup"
 											placeholder="blur"
+											blurDataURL="/image/placeholder/blur.jpg"
 										/>
 									</motion.div>
 								</div>
 								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 overflow-hidden">
 									<motion.h1
-										className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold mb-3"
+										className="px-3 mb-3 text-5xl font-bold text-black bg-white bg-opacity-50 lg:bg-transparent md-px-0 md:text-8xl"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -321,7 +343,7 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										Feel free to contact me if you have any{" "}
-										<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
+										<span className="bg-transparent bg-opacity-50 md:bg-gray-100 xl:bg-transparent">
 											questions or just want to say hi.
 										</span>
 									</motion.p>
@@ -337,11 +359,12 @@ const MyPage = () => {
 											kuriamichael463@gmail.com
 										</a>
 									</motion.p>
+									
 									{/* icons */}
-									<div className="flex justify-center items-center space-x-4">
+									<div className="flex items-center justify-center space-x-4">
 										<motion.a
 											href="mailto:kuriamichael463@gmail.com?subject=Hello&body=Hello Kuria,"
-											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
+											className="flex items-center justify-center text-gray-100 transition-all duration-300 ease-in-out bg-gray-700 rounded-full w-14 h-14 hover:bg-gray-400"
 											initial={{ y: 40, opacity: 0 }}
 											whileInView={{ y: 0, opacity: 1 }}
 											transition={{
@@ -355,7 +378,7 @@ const MyPage = () => {
 											href="https://github.com/unlisted02"
 											target="_blank"
 											rel="noopener noreferrer"
-											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
+											className="flex items-center justify-center text-gray-100 transition-all duration-300 ease-in-out bg-gray-700 rounded-full w-14 h-14 hover:bg-gray-400"
 											initial={{ opacity: 0, y: 40 }}
 											whileInView={{ opacity: 1, y: 0 }}
 											transition={{
@@ -368,7 +391,7 @@ const MyPage = () => {
 											href="https://twitter.com"
 											target="_blank"
 											rel="noopener noreferrer"
-											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
+											className="flex items-center justify-center text-gray-100 transition-all duration-300 ease-in-out bg-gray-700 rounded-full w-14 h-14 hover:bg-gray-400"
 											initial={{ opacity: 0, y: 40 }}
 											whileInView={{ opacity: 1, y: 0 }}
 											transition={{
@@ -384,7 +407,7 @@ const MyPage = () => {
 											href="https://www.linkedin.com/in/michael-kuria-74aa71257/"
 											target="_blank"
 											rel="noopener noreferrer"
-											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
+											className="flex items-center justify-center text-gray-100 transition-all duration-300 ease-in-out bg-gray-700 rounded-full w-14 h-14 hover:bg-gray-400"
 											initial={{ opacity: 0, y: 40 }}
 											whileInView={{ opacity: 1, y: 0 }}
 											transition={{
@@ -397,7 +420,7 @@ const MyPage = () => {
 											href="https://discord.com"
 											target="_blank"
 											rel="noopener noreferrer"
-											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
+											className="flex items-center justify-center text-gray-100 transition-all duration-300 ease-in-out bg-gray-700 rounded-full w-14 h-14 hover:bg-gray-400"
 											initial={{ opacity: 0, y: 40 }}
 											whileInView={{ opacity: 1, y: 0 }}
 											transition={{

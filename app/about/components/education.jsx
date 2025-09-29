@@ -10,9 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import Me4 from "@/public/image/ME00.jpg";
-import Me5 from "@/public/image/maseno.jpg";
-import Me6 from "@/public/image/code.jpg";
+// images - using string paths instead of imports
 
 function Wrapper({ children }) {
 	return (
@@ -82,8 +80,8 @@ export default function Education() {
 							</div>
 							<div className="gap-4 mb-4 flex items-stretch md:h-[300px] xl:h-[400px]">
 								<div className="flex-[1] transition-all duration-300 ease-in-out hover:flex-[3] group">
-									<Image
-										src={Me5}
+																				<Image
+																					src="/image/maseno.jpg"
 										width={400}
 										height={225}
 										alt="University"
@@ -91,8 +89,8 @@ export default function Education() {
 									/>
 								</div>
 								<div className="flex-[1] transition-all duration-300 ease-in-out hover:flex-[3] group">
-									<Image
-										src={Me4}
+																				<Image
+																					src="/image/ME00.jpg"
 										width={400}
 										height={225}
 										alt="University"
@@ -100,8 +98,8 @@ export default function Education() {
 									/>
 								</div>
 								<div className="flex-[1] transition-all duration-300 ease-in-out hover:flex-[3] group">
-									<Image
-										src={Me6}
+																				<Image
+																					src="/image/code.jpg"
 										width={400}
 										height={225}
 										alt="University"

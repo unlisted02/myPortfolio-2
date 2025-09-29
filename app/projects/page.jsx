@@ -5,11 +5,7 @@ import { motion } from "framer-motion";
 import Button from "@/components/Button";
 import Image from "next/image";
 
-// images
-import Idea from "@/public/image/projects/idea.jpg";
-import Idea1 from "@/public/image/projects/idea1.jpg";
-import Idea2 from "@/public/image/projects/idea2.jpg";
-import ProjectAll from "@/public/image/projects.png";
+// images - using string paths instead of imports
 
 import Hr from "@/components/Hr";
 import ProjectCard from "./components/ProjectCard";
@@ -35,32 +31,33 @@ export default function Page() {
 		<>
 			<main className="overflow-hidden">
 				<FixedButon href="/#projects">
-					<FontAwesomeIcon icon={faChevronLeft} className="text-black pr-10" />
+					<FontAwesomeIcon icon={faChevronLeft} className="pr-10 text-black" />
 				</FixedButon>
-				<div className="relative h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden">
+				<div className="relative flex flex-col items-center justify-center w-screen h-screen gap-4 p-10 mb-10 overflow-hidden">
 					<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 						<motion.div
 							initial={{ scale: 1 }}
 							animate={{ scale: 1.6 }}
 							transition={{ duration: 1, ease: "circOut" }}
 							className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 ">
-							<Image
-								src={ProjectAll}
+																				<Image
+																					src="/image/projects.png"
 								alt="Kuria"
 								layout="fill"
 								objectFit="cover"
 								placeholder="blur"
+								blurDataURL="/image/placeholder/blur.jpg"
 							/>
 						</motion.div>
 					</div>
 					<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 pt-4 backdrop-filter backdrop-blur-sm md:backdrop-blur-none md:backdrop-filter-none bg-gray-100 bg-opacity-50 md:bg-transparent md:pt-0">
-						<h1 className="md:bg-white bg-transparent lg:bg-transparent bg-opacity-50 md-px-0 text-black text-5xl md:text-8xl font-bold">
+						<h1 className="text-5xl font-bold text-black bg-transparent bg-opacity-50 md:bg-white lg:bg-transparent md-px-0 md:text-8xl">
 							My Projects
 						</h1>
 						<Hr />
 						<p className="title  text-xl mt-4 tracking-wider text-gray-900 leading-[1.7rem] mb-5">
 							List of my projects that I have done and{" "}
-							<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
+							<span className="bg-transparent bg-opacity-50 md:bg-gray-100 xl:bg-transparent">
 								{" "}
 								currently working on.
 							</span>
@@ -80,15 +77,15 @@ export default function Page() {
 						</motion.div>
 					</div>
 				</div>
-				<div className="mt-10 flex flex-col justify-start items-center w-full pl-10 md:pl-32">
-					<div className="flex justify-center items-center flex-col my-5 self-start ">
+				<div className="flex flex-col items-center justify-start w-full pl-10 mt-10 md:pl-32">
+					<div className="flex flex-col items-center self-start justify-center my-5 ">
 						<Hr variant="long"></Hr>
-						<h1 className="text-3xl font-bold mt-3">Hightlight</h1>
+						<h1 className="mt-3 text-3xl font-bold">Highlight</h1>
 					</div>
 				</div>
-				<div className="relative w-screen mx-auto container gap-4 px-10 grid grid-cols-1 md:grid-cols-2 mb-10">
-					<div className="flex justify-center items-start flex-col mb-5 ">
-						<div className="images relative w-full  aspect-square">
+				<div className="container relative grid w-screen grid-cols-1 gap-4 px-10 mx-auto mb-10 md:grid-cols-2">
+					<div className="flex flex-col items-start justify-center mb-5 ">
+						<div className="relative w-full images aspect-square">
 							<div className="absolute top-28 left-10 h-[40%]  aspect-video grayscale hover:grayscale-0 transition-all ease duration-300 hover:scale-150 z-10">
 								<motion.div
 									initial={{ opacity: 0, scale: 0.5, x: 100 }}
@@ -98,12 +95,13 @@ export default function Page() {
 										x: 0,
 									}}
 									className="w-full h-full shadow-lg">
-									<Image
-										src={Idea}
+																								<Image
+																									src="/image/projects/idea.jpg"
 										alt="Kuria"
 										layout="fill"
 										objectFit="cover"
 										placeholder="blur"
+								blurDataURL="/image/placeholder/blur.jpg"
 										className="rat"
 									/>
 								</motion.div>
@@ -122,12 +120,13 @@ export default function Page() {
 									}}
 									transition={{ delay: 0.3 }}
 									className="w-full h-full shadow-lg ">
-									<Image
-										src={Idea2}
+																								<Image
+																									src="/image/projects/idea2.jpg"
 										alt="Kuria"
 										layout="fill"
 										objectFit="cover"
 										placeholder="blur"
+								blurDataURL="/image/placeholder/blur.jpg"
 										objectPosition="0% 0%"
 									/>
 								</motion.div>
@@ -148,19 +147,20 @@ export default function Page() {
 										delay: 0.5,
 									}}
 									className="w-full h-full shadow-lg">
-									<Image
-										src={Idea1}
+																								<Image
+																									src="/image/projects/idea1.jpg"
 										alt="Kuria"
 										layout="fill"
 										objectFit="cover"
 										placeholder="blur"
+								blurDataURL="/image/placeholder/blur.jpg"
 									/>
 								</motion.div>
 							</div>
 						</div>
 					</div>
 					<motion.div
-						className="flex justify-center items-start flex-col mb-5 md:px-10"
+						className="flex flex-col items-start justify-center mb-5 md:px-10"
 						initial={{
 							opacity: 0,
 							x: 200,
@@ -173,16 +173,16 @@ export default function Page() {
 							delay: 0.5,
 							type: "spring",
 						}}>
-						<h2 className="text-2xl font-bold tracking-wider mb-3">
+						<h2 className="mb-3 text-2xl font-bold tracking-wider">
 							MyIdea
 						</h2>
-						<p className="text-gray-600 text-justify title text-lg">
+						<p className="text-lg text-justify text-gray-600 title">
 						A comprehensive enterprise-level innovation management platform built for Kenya Airways, serving both internal employees and external stakeholders. Built with .NET 6.0 and Next.js, the platform enables idea submission, project tracking, real-time notifications, and analytics. Implements JWT authentication, role-based access control, and integrates with SharePoint. Successfully deployed to production with automated CI/CD pipeline.
 						</p>
-						<p className="text-gray-600 text-justify title text-lg mt-3">
+						<p className="mt-3 text-lg text-justify text-gray-600 title">
 						The platform serves over 500+ employees across multiple departments, enabling seamless collaboration and idea sharing. Built with scalability in mind using microservices architecture, the system handles high traffic loads and provides real-time updates through SignalR WebSocket connections. The frontend utilizes Next.js 13 with App Router, TypeScript, and Tailwind CSS for a modern, responsive user experience.
 						</p>
-						<p className="text-gray-600 text-justify title text-lg mt-3">
+						<p className="mt-3 text-lg text-justify text-gray-600 title">
 						Key technical achievements include implementing advanced search algorithms with Elasticsearch, setting up automated testing with 90%+ code coverage using xUnit and Jest, and establishing monitoring with Application Insights and custom dashboards. The project resulted in a 40% increase in innovation project completion rates and received recognition from senior management for its impact on organizational efficiency.
 						</p>
 						<div className="mt-3">
@@ -197,11 +197,11 @@ export default function Page() {
 						</div>
 					</motion.div>
 				</div>
-				<div className="mt-16 flex flex-col justify-start items-center w-full pl-10 md:pl-32">
-					<div className="flex justify-center items-center flex-col my-5 self-start">
+				<div className="flex flex-col items-center justify-start w-full pl-10 mt-16 md:pl-32">
+					<div className="flex flex-col items-center self-start justify-center my-5">
 						<Hr variant="long"></Hr>
 						<motion.h1
-							className="text-3xl font-bold mt-3"
+							className="mt-3 text-3xl font-bold"
 							initial={{
 								opacity: 0,
 								x: -200,
@@ -232,7 +232,7 @@ export default function Page() {
 					transition={{
 						type: "spring",
 					}}
-					className="flex flex-row justify-center items-start flex-wrap gap-3 md:gap-5 my-5 ">
+					className="flex flex-row flex-wrap items-start justify-center gap-3 my-5 md:gap-5 ">
 					{Object.keys(category).map((key, index) => (
 						<button
 							key={index}
@@ -248,7 +248,7 @@ export default function Page() {
 				</motion.div>
 
 				{/* projects */}
-				<div className="w-screen mx-auto container gap-4 px-10 grid grid-cols-1 md:grid-cols-2 mb-10 cursor-pointer">
+				<div className="container grid w-screen grid-cols-1 gap-4 px-10 mx-auto mb-10 cursor-pointer md:grid-cols-2">
 					{projects.map((project, index) => (
 						<ProjectCard
 							project={project}
@@ -266,7 +266,7 @@ export default function Page() {
 					whileInView={{
 						opacity: 1,
 					}}
-					className="flex justify-center items-center flex-col my-5 self-start ">
+					className="flex flex-col items-center self-start justify-center my-5 ">
 					<Button variation="primary">
 						<Link href="projects/archive">View In Archive</Link>
 					</Button>

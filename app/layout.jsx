@@ -7,32 +7,39 @@ import "./nprogress.css";
 import { Analytics } from "@vercel/analytics/react";
 
 import ClientTopProgressBar from "@/components/ClientTopProgressBar";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
-    title: "Kuria | Portofolio",
-
-    description:
-		"My name is Kuria, I'm a web developer and I'm passionate about it. I'm currently working as a software engineer at Kenya Airways.",
-
+    title: "Michael Kuria | Full Stack Developer",
+    description: "Passionate full-stack developer with 3+ years of experience building scalable web applications and AI-powered solutions. Specializing in modern web technologies, React, Next.js, and machine learning.",
+    keywords: ["Michael Kuria", "Full Stack Developer", "Web Developer", "AI Developer", "React", "Next.js", "JavaScript", "Python", "Machine Learning", "Portfolio"],
     author: "Michael Kuria",
     siteUrl: "https://www.kuria.my.id",
-    applicationName: "Kuria",
-
+    applicationName: "Michael Kuria Portfolio",
+    robots: "index, follow",
+    viewport: "width=device-width, initial-scale=1",
+    
     openGraph: {
 		type: "website",
 		url: "https://www.kuria.my.id",
-		title: "Kuria | Portofolio",
-		site_name: "Kuria | Portofolio",
-		description: "My name is Kuria, This is my portofolio website.",
+		title: "Michael Kuria | Full Stack Developer",
+		site_name: "Michael Kuria Portfolio",
+		description: "Passionate full-stack developer building scalable web applications and AI-powered solutions. 15+ projects delivered, 500+ users served.",
 		width: 1200,
 		height: 630,
 		images: [
 			{
 				url: "/og-image-rev.png",
-				alt: "Kuria Portofolio",
+				alt: "Michael Kuria - Full Stack Developer Portfolio",
 			},
 		],
-		site_name: "Kuria | Portofolio",
+	},
+	
+	twitter: {
+		card: "summary_large_image",
+		title: "Michael Kuria | Full Stack Developer",
+		description: "Passionate full-stack developer building scalable web applications and AI-powered solutions.",
+		images: ["/og-image-rev.png"],
 	}
 };
 
@@ -43,7 +50,7 @@ export default function RootLayout({ children }) {
 				<ClientTopProgressBar />
 				<Navbar />
 				{children}
-
+				<ScrollToTop />
 				<Analytics />
 			</body>
 		</html>
