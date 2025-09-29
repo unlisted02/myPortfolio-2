@@ -96,8 +96,8 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										<p className="title text-md 2xl:text-xl tracking-wider text-gray-500 leading-[1.7rem] mb-3">
-											Hi! I'm Kuria, a passionate full-stack developer with 3+ years of experience building 
-											scalable web applications and AI-powered solutions. I've successfully delivered 
+											Hi! I&apos;m Kuria, a passionate full-stack developer with 3+ years of experience building 
+											scalable web applications and AI-powered solutions. I&apos;ve successfully delivered 
 											<span className="font-semibold text-gray-700"> 15+ projects</span> serving 
 											<span className="font-semibold text-gray-700"> 500+ users</span> across various industries.
 										</p>
