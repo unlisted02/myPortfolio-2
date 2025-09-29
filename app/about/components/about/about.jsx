@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Me1 from "@/public/image/meAlways.jpg";
-import Me2 from "@/public/image/About.jpg";
-import Me3 from "@/public/image/ME00.jpg";
+// images - using string paths instead of imports
 import Hr from "@/components/Hr";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faChessKnight, faPlane, faSkating } from "@fortawesome/free-solid-svg-icons";
@@ -13,6 +11,14 @@ function Title() {
 			<div className="flex justify-center items-center flex-col my-5 self-start ">
 				<Hr variant="long"></Hr>
 				<h1 className="text-3xl font-bold mt-3">Who Am I?</h1>
+				<motion.p 
+					className="text-gray-600 mt-2 max-w-md"
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.2 }}
+				>
+					A passionate developer with a love for solving complex problems through technology
+				</motion.p>
 			</div>
 		</div>
 	);
@@ -34,12 +40,13 @@ export default function About() {
 									x: 0,
 								}}
 								className="w-full h-full">
-								<Image
-									src={Me1}
+																		<Image
+																			src="/image/meAlways.jpg"
 									alt="Kuria"
 									layout="fill"
 									objectFit="cover"
 									placeholder="blur"
+									blurDataURL="/image/placeholder/blur.jpg"
 								/>
 							</motion.div>
 						</div>
@@ -57,12 +64,13 @@ export default function About() {
 								}}
 								transition={{ delay: 0.3 }}
 								className="w-full h-full">
-								<Image
-									src={Me2}
+																		<Image
+																			src="/image/About.jpg"
 									alt="Kuria"
 									layout="fill"
 									objectFit="cover"
 									placeholder="blur"
+									blurDataURL="/image/placeholder/blur.jpg"
 								/>
 							</motion.div>
 						</div>
@@ -82,12 +90,13 @@ export default function About() {
 									delay: 0.5,
 								}}
 								className="w-full h-full">
-								<Image
-									src={Me3}
+																		<Image
+																			src="/image/ME00.jpg"
 									alt="Kuria"
 									layout="fill"
 									objectFit="cover"
 									placeholder="blur"
+									blurDataURL="/image/placeholder/blur.jpg"
 								/>
 							</motion.div>
 						</div>

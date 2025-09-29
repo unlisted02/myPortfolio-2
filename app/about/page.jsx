@@ -12,8 +12,7 @@ import Skills from "./components/skills/skills.jsx";
 import Experience from "./components/experience.jsx";
 import Education from "./components/education.jsx";
 
-// images
-import Hero from "@/public/image/meImage.jpg";
+// images - using string paths instead of imports
 
 import Hr from "@/components/Hr";
 import About from "./components/about/about.jsx";
@@ -41,11 +40,12 @@ export default function Page() {
 							transition={{ ease: "circOut", duration: 1 }}
 							className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 ">
 							<Image
-								src={Hero}
+								src="/image/meImage.jpg"
 								alt="Kuria"
 								layout="fill"
 								objectFit="cover"
 								placeholder="blur"
+								blurDataURL="/image/placeholder/blur.jpg"
 							/>
 						</motion.div>
 					</div>
