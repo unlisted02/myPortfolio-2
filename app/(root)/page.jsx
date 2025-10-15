@@ -176,7 +176,7 @@ const MyPage = () => {
 											damping: 20,
 										}}>
 										<Image
-											src="/image/mike.jpg"
+											src="/image/Mike.jpg"
 											layout="fill"
 											className="object-cover"
 											alt="Kuria"
