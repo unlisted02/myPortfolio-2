@@ -40,8 +40,8 @@ export default function About() {
 									x: 0,
 								}}
 								className="w-full h-full">
-																		<Image
-																			src="/image/meAlways.jpg"
+								<Image
+									src="/image/view1.jpg"
 									alt="Kuria"
 									layout="fill"
 									objectFit="cover"
@@ -64,8 +64,8 @@ export default function About() {
 								}}
 								transition={{ delay: 0.3 }}
 								className="w-full h-full">
-																		<Image
-																			src="/image/About.jpg"
+								<Image
+									src="/image/meAlways.jpg"
 									alt="Kuria"
 									layout="fill"
 									objectFit="cover"
@@ -90,8 +90,8 @@ export default function About() {
 									delay: 0.5,
 								}}
 								className="w-full h-full">
-																		<Image
-																			src="/image/ME00.jpg"
+								<Image
+									src="/image/chessMike.jpg"
 									alt="Kuria"
 									layout="fill"
 									objectFit="cover"

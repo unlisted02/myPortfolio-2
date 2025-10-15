@@ -25,9 +25,12 @@ const MyPage = () => {
 	const fullpageOptions = {
 		anchors: ["home", "about", "projects", "contact"],
 		scrollingSpeed: 1000,
-		licenseKey: "gplv3-license",
 		menu: "#sidebar",
 		lockAnchors: false,
+		autoScrolling: true,
+		fitToSection: true,
+		scrollBar: false,
+		bigSectionsDestination: "top",
 	};
 
 	return (
@@ -116,14 +119,15 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										<Button variation="primary">
-											<a
-												href="https://drive.google.com/uc?export=download&id=1pPDQttrsXLI3NFlOl5r0Y9cWu-eE0uh5"
-												download="MICHAEL_KURIA_CV.pdf"
-												target="_blank"
-												rel="noopener noreferrer"
-												className="flex items-center gap-2">
-												📄 Download CV
-											</a>
+										  <a
+											href="https://drive.google.com/uc?export=download&id=1h4H63_6nwfWxRb4Lqwt8sWIyK2w6ZwIL"
+											download="MICHAEL_KURIA_CV.pdf"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="flex items-center gap-2"
+										  >
+											📄 Download CV
+										  </a>
 										</Button>
 										<Button variation="secondary">
 											<a href="#contact">Contact Me</a>
@@ -154,10 +158,10 @@ const MyPage = () => {
 						</div>
 						
 						<div className="section">
-							<div className="relative flex flex-col items-center justify-center w-screen gap-4 overflow-hidden md:h-screen">
-								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
+						<div className="relative flex flex-col items-center justify-center w-screen h-screen gap-4 overflow-hidden">
+							<div className="z-0 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 									<motion.div
-										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
+									className="relative bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
 										initial={{
 											x: 300,
 											opacity: 0,
