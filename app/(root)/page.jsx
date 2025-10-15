@@ -25,9 +25,12 @@ const MyPage = () => {
 	const fullpageOptions = {
 		anchors: ["home", "about", "projects", "contact"],
 		scrollingSpeed: 1000,
-		licenseKey: "gplv3-license",
 		menu: "#sidebar",
 		lockAnchors: false,
+		autoScrolling: true,
+		fitToSection: true,
+		scrollBar: false,
+		bigSectionsDestination: "top",
 	};
 
 	return (
@@ -155,10 +158,10 @@ const MyPage = () => {
 						</div>
 						
 						<div className="section">
-							<div className="relative flex flex-col items-center justify-center w-screen gap-4 overflow-hidden md:h-screen">
-								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
+						<div className="relative flex flex-col items-center justify-center w-screen h-screen gap-4 overflow-hidden">
+							<div className="z-0 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 									<motion.div
-										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
+									className="relative bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
 										initial={{
 											x: 300,
 											opacity: 0,
@@ -176,15 +179,12 @@ const MyPage = () => {
 											damping: 20,
 										}}>
 										<Image
-											src="/image/Mike.jpg"
-											width={1920}
-											height={2000}
-											quality={100}
-											className="object-cover w-full h-full"
+											src="/image/mike.jpg"
+											layout="fill"
+											className="object-cover"
 											alt="Kuria"
 											placeholder="blur"
 											blurDataURL="/image/placeholder/blur.jpg"
-											priority
 										/>
 									</motion.div>
 								</div>
