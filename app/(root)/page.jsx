@@ -177,11 +177,14 @@ const MyPage = () => {
 										}}>
 										<Image
 											src="/image/Mike.jpg"
-											layout="fill"
-											className="object-cover"
+											width={1920}
+											height={2000}
+											quality={100}
+											className="object-cover w-full h-full"
 											alt="Kuria"
 											placeholder="blur"
 											blurDataURL="/image/placeholder/blur.jpg"
+											priority
 										/>
 									</motion.div>
 								</div>
