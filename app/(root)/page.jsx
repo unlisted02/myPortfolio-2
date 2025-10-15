@@ -25,10 +25,8 @@ const MyPage = () => {
 	const fullpageOptions = {
 		anchors: ["home", "about", "projects", "contact"],
 		scrollingSpeed: 1000,
-		licenseKey: "gplv3-license",
 		menu: "#sidebar",
 		lockAnchors: false,
-		// Ensure consistent section snap behavior
 		autoScrolling: true,
 		fitToSection: true,
 		scrollBar: false,
@@ -121,14 +119,15 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										<Button variation="primary">
-											<a
-												href="https://drive.google.com/uc?export=download&id=1pPDQttrsXLI3NFlOl5r0Y9cWu-eE0uh5"
-												download="MICHAEL_KURIA_CV.pdf"
-												target="_blank"
-												rel="noopener noreferrer"
-												className="flex items-center gap-2">
-												📄 Download CV
-											</a>
+										  <a
+											href="https://drive.google.com/uc?export=download&id=1h4H63_6nwfWxRb4Lqwt8sWIyK2w6ZwIL"
+											download="MICHAEL_KURIA_CV.pdf"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="flex items-center gap-2"
+										  >
+											📄 Download CV
+										  </a>
 										</Button>
 										<Button variation="secondary">
 											<a href="#contact">Contact Me</a>
