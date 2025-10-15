@@ -28,6 +28,11 @@ const MyPage = () => {
 		licenseKey: "gplv3-license",
 		menu: "#sidebar",
 		lockAnchors: false,
+		// Ensure consistent section snap behavior
+		autoScrolling: true,
+		fitToSection: true,
+		scrollBar: false,
+		bigSectionsDestination: "top",
 	};
 
 	return (
@@ -154,10 +159,10 @@ const MyPage = () => {
 						</div>
 						
 						<div className="section">
-							<div className="relative flex flex-col items-center justify-center w-screen gap-4 overflow-hidden md:h-screen">
-								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
+						<div className="relative flex flex-col items-center justify-center w-screen h-screen gap-4 overflow-hidden">
+							<div className="z-0 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 									<motion.div
-										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
+									className="relative bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
 										initial={{
 											x: 300,
 											opacity: 0,
