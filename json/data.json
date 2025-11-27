@@ -2,6 +2,32 @@
   "Projects": [
     {
       "show": true,
+      "title": "Full Ecommerce Site",
+      "desc": [
+        "A full-stack MERN commerce platform built for a client. Users can browse, search, and purchase products with cart, checkout, and order tracking flows. Admins manage inventory, users, reviews, and newsletter subscribers via a glassmorphism-themed dashboard with fresh data fetches. Implements JWT auth with role-based access, Cloudinary image handling, Redux state, and Nodemailer-powered contact/newsletter emails. Deploys to Render with MongoDB Atlas, ready for Stripe integration once keys are provided."],
+      "year": "2025",
+      "preview": "https://shopx-ecommerce.onrender.com/",
+      "thumbnail": "/image/projects/home.png",
+      "images": [
+        "/image/projects/preview.png",
+        "/image/projects/adminDash.png"
+      ],
+      "tech": [
+        "Node.js + Express",
+        "React 18",
+        "Redux Toolkit",
+        "SCSS",
+        "MongoDB",
+        "Mongoose",
+        "Cloudinary",
+        "Nodemailer",
+        "Render"
+], 
+      "slug": "full-ecommerce-site",
+      "category": [1, 2, 3]
+    },
+    {
+      "show": false,
       "title": "MyIdea Kenya Airways",
       "desc": [
         "A comprehensive enterprise-level innovation management platform built for Kenya Airways, serving both internal employees and external stakeholders. Built with .NET 6.0 and Next.js, the platform enables idea submission, project tracking, real-time notifications, and analytics. Implements JWT authentication, role-based access control, and integrates with SharePoint. Successfully deployed to production with automated CI/CD pipeline."],
@@ -21,7 +47,7 @@
         "Prisma",
         "MySQL"
       ], 
-      "slug": "smart-home",
+      "slug": "myidea-kenya-airways",
       "category": [1, 2, 3]
     },
 
