@@ -25,6 +25,7 @@ const MyPage = () => {
 	const fullpageOptions = {
 		anchors: ["home", "about", "projects", "contact"],
 		scrollingSpeed: 1000,
+		licenseKey: "gplv3-license",
 		menu: "#sidebar",
 		lockAnchors: false,
 		autoScrolling: true,
@@ -61,7 +62,7 @@ const MyPage = () => {
 										</div>
 									</div>
 									<motion.h3
-										className="uppercase text-xl mb-3 font-normal text tracking-[.5rem] text-gray-500"
+										className="uppercase text-xl mb-3 font-bold text tracking-[.5rem] text-gray-500"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -78,7 +79,7 @@ const MyPage = () => {
 											delay: 0.3,
 											type: "spring",
 										}}>
-										Full Stack Developer
+										Software Engineer
 									</motion.h1>
 									<motion.p
 										className="mb-4 text-lg font-medium text-gray-600"
@@ -99,8 +100,8 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										<p className="title text-md 2xl:text-xl tracking-wider text-gray-500 leading-[1.7rem] mb-3">
-											Hi! I&apos;m Kuria, a passionate full-stack developer with 3+ years of experience building 
-											scalable web applications and AI-powered solutions. I&apos;ve successfully delivered 
+											Hi! I&apos;m Kuria, a passionate software engineer with 3+ years of experience building 
+											scalable software applications and AI-powered solutions. I&apos;ve successfully delivered 
 											<span className="font-semibold text-gray-700"> 15+ projects</span> serving 
 											<span className="font-semibold text-gray-700"> 500+ users</span> across various industries.
 										</p>
@@ -120,7 +121,7 @@ const MyPage = () => {
 										}}>
 										<Button variation="primary">
 										  <a
-											href="https://drive.google.com/uc?export=download&id=1h4H63_6nwfWxRb4Lqwt8sWIyK2w6ZwIL"
+											href="https://drive.google.com/file/d/1kB94VEqG4GSwn1LWhWrFGxNDseYPB2PV/view?usp=sharing"
 											download="MICHAEL_KURIA_CV.pdf"
 											target="_blank"
 											rel="noopener noreferrer"
