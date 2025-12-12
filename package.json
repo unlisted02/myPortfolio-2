@@ -3,7 +3,7 @@
   "author": {
     "name": "Michael Kuria",
     "email": "kuriamichael463@gmail.com",
-    "url": "https://kuria.my.id"
+    "url": "https://kuria-portfolio.vercel.app"
   },
   "license": "GPL-3.0",
   "copyright": "Copyright (C) 2025 Michael Kuria",
@@ -26,21 +26,21 @@
     "@tailwindcss/postcss": "^4.0.14",
     "@vercel/analytics": "^1.5.0",
     "eslint": "9.22.0",
-    "eslint-config-next": "15.2.3",
+    "eslint-config-next": "15.2.6",
     "framer-motion": "^12.5.0",
-    "next": "15.2.3",
+    "next": "15.2.6",
     "nprogress": "^0.2.0",
     "postcss": "^8.5.3",
     "prop-types": "^15.8.1",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.0.1",
+    "react-dom": "19.0.1",
     "sharp": "^0.33.5",
     "sitemap": "^8.0.0",
     "swr": "^2.3.3",
     "tailwindcss": "^4.0.14"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "15.2.3",
+    "@next/bundle-analyzer": "15.2.6",
     "@types/react": "19.1.5",
     "cross-env": "^7.0.3"
   }
