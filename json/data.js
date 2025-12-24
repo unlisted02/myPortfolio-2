@@ -1,10 +1,14 @@
-{
+// Auto-generated JS wrapper around data.json to avoid Turbopack JSON module issues
+// If you update data.json, make sure this file stays in sync.
+
+const data = {
   "Projects": [
     {
       "show": true,
       "title": "Full Ecommerce Site",
       "desc": [
-        "A full-stack MERN commerce platform built for a client. Users can browse, search, and purchase products with cart, checkout, and order tracking flows. Admins manage inventory, users, reviews, and newsletter subscribers via a glassmorphism-themed dashboard with fresh data fetches. Implements JWT auth with role-based access, Cloudinary image handling, Redux state, and Nodemailer-powered contact/newsletter emails. Deploys to Render with MongoDB Atlas, ready for Stripe integration once keys are provided."],
+        "A full-stack MERN commerce platform built for a client. Users can browse, search, and purchase products with cart, checkout, and order tracking flows. Admins manage inventory, users, reviews, and newsletter subscribers via a glassmorphism-themed dashboard with fresh data fetches. Implements JWT auth with role-based access, Cloudinary image handling, Redux state, and Nodemailer-powered contact/newsletter emails. Deploys to Render with MongoDB Atlas, ready for Stripe integration once keys are provided."
+      ],
       "year": "2025",
       "code": "https://github.com/unlisted02/MERN-Stack-Full-Ecommerce-Site",
       "preview": "https://shopx-ecommerce.onrender.com/",
@@ -23,7 +27,7 @@
         "Cloudinary",
         "Nodemailer",
         "Render"
-], 
+      ],
       "slug": "full-ecommerce-site",
       "category": [1, 2, 3]
     },
@@ -31,7 +35,8 @@
       "show": false,
       "title": "MyIdea Kenya Airways",
       "desc": [
-        "A comprehensive enterprise-level innovation management platform built for Kenya Airways, serving both internal employees and external stakeholders. Built with .NET 6.0 and Next.js, the platform enables idea submission, project tracking, real-time notifications, and analytics. Implements JWT authentication, role-based access control, and integrates with SharePoint. Successfully deployed to production with automated CI/CD pipeline."],
+        "A comprehensive enterprise-level innovation management platform built for Kenya Airways, serving both internal employees and external stakeholders. Built with .NET 6.0 and Next.js, the platform enables idea submission, project tracking, real-time notifications, and analytics. Implements JWT authentication, role-based access control, and integrates with SharePoint. Successfully deployed to production with automated CI/CD pipeline."
+      ],
       "year": "2025",
       "preview": "https://myidea.kenya-airways.com",
       "thumbnail": "/image/projects/idea.jpg",
@@ -47,16 +52,16 @@
         "Shadcn UI",
         "Prisma",
         "MySQL"
-      ], 
+      ],
       "slug": "myidea-kenya-airways",
       "category": [1, 2, 3]
     },
-
     {
       "show": true,
       "title": "Smart Home Safety System",
       "desc": [
-        "Built with JavaScript and Python can manage various household functions through automation and user control. JavaScript, especially with frameworks like Node.js, can handle API calls, and front-end web interfaces. Python manages backend automation tasks, control devices via microcontrollers and process sensor data based on user preferences or environmental changes."],
+        "Built with JavaScript and Python can manage various household functions through automation and user control. JavaScript, especially with frameworks like Node.js, can handle API calls, and front-end web interfaces. Python manages backend automation tasks, control devices via microcontrollers and process sensor data based on user preferences or environmental changes."
+      ],
       "year": "2024",
       "code": "https://github.com/unlisted02/Smart-House-Safety",
       "thumbnail": "/image/projects/house.jpg",
@@ -72,7 +77,7 @@
         "Raspberry Pi",
         "MySQL",
         "IBM Cloud"
-      ], 
+      ],
       "slug": "smart-home",
       "category": [1, 2, 3]
     },
@@ -95,7 +100,7 @@
         "PyAudio",
         "SpeechRecognition",
         "pyttsx3"
-      ], 
+      ],
       "slug": "jarvis-ai",
       "category": [1, 2]
     },
@@ -103,7 +108,8 @@
       "show": true,
       "title": "E-Learning Platform",
       "desc": [
-        "The project involves the creation of an e-learning website using HTML, CSS, Bootstrap 5, and JavaScript. The website aims to provide a user-friendly and responsive platform for learners to access educational content. Unlisted Academy creates an interactive and visually appealing learning experience."],
+        "The project involves the creation of an e-learning website using HTML, CSS, Bootstrap 5, and JavaScript. The website aims to provide a user-friendly and responsive platform for learners to access educational content. Unlisted Academy creates an interactive and visually appealing learning experience."
+      ],
       "year": "2024",
       "preview": "https://e-learning-delta-opal.vercel.app/",
       "code": "https://github.com/unlisted02/E-Learning",
@@ -111,7 +117,6 @@
       "images": [
         "/image/projects/learnimage1.jpg",
         "/image/projects/learnimage2.jpg"
-        
       ],
       "tech": [
         "HTML",
@@ -134,7 +139,7 @@
       "thumbnail": "/image/projects/tourist.png",
       "images": [
         "/image/projects/tour.png",
-        "/image/projects/events.png",
+        "/image/projects/tour.png",
         "/image/projects/explore.png"
       ],
       "tech": [
@@ -166,9 +171,13 @@
         "NumPy",
         "Jupyter Notebook",
         "Google Colab"
-      ], 
+      ],
       "slug": "movie-recommendation",
       "category": [1, 2]
     }
   ]
-}
+};
+
+export default data;
+
+
