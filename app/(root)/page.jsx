@@ -25,7 +25,7 @@ const MyPage = () => {
 	const fullpageOptions = {
 		anchors: ["home", "about", "projects", "contact"],
 		scrollingSpeed: 1000,
-		licenseKey: "gplv3-license",
+		licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
 		menu: "#sidebar",
 		lockAnchors: false,
 		autoScrolling: true,
@@ -145,7 +145,7 @@ const MyPage = () => {
 									}}>
 									<div className="w-auto h-auto transition-all duration-300 rounded-full lg:px-12 grayscale hover:grayscale-0 ease">
 										<Image
-											src="/image/Kuria.png"
+											src="/image/grad2.jpg"
 											width={400}
 											height={550}
 											placeholder="blur"
