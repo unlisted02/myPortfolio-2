@@ -22,7 +22,9 @@ const category = {
 
 export default function Page() {
 	const [activeCategory, setActiveCategory] = useState(1);
-	const projects = Projects.Projects.filter((item) => item.show === true);
+	const projects = Projects.Projects.filter((item) => item.show === true)
+		.sort((a, b) => Number(b.year) - Number(a.year));
+	const highlightProject = Projects.Projects.find((p) => p.highlight === true);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -83,120 +85,129 @@ export default function Page() {
 						<h1 className="mt-3 text-3xl font-bold">Highlight</h1>
 					</div>
 				</div>
-				<div className="container relative grid w-screen grid-cols-1 gap-4 px-10 mx-auto mb-10 md:grid-cols-2">
-					<div className="flex flex-col items-start justify-center mb-5 ">
-						<div className="relative w-full images aspect-square">
-							<div className="absolute top-28 left-10 h-[40%]  aspect-video grayscale hover:grayscale-0 transition-all ease duration-300 hover:scale-150 z-10">
-								<motion.div
-									initial={{ opacity: 0, scale: 0.5, x: 100 }}
-									whileInView={{
-										opacity: 1,
-										scale: 1,
-										x: 0,
-									}}
-									className="w-full h-full shadow-lg">
-																								<Image
-																									src="/image/projects/idea.jpg"
-										alt="Kuria"
-										layout="fill"
-										objectFit="cover"
-										placeholder="blur"
-								blurDataURL="/image/placeholder/blur.jpg"
-										className="rat"
-									/>
-								</motion.div>
-							</div>
-							<div className="absolute top-10 right-28 h-[30%]  aspect-video grayscale hover:grayscale-0 transition-all ease duration-300 hover:scale-150">
-								<motion.div
-									initial={{
-										opacity: 0,
-										scale: 0.5,
-										x: -100,
-									}}
-									whileInView={{
-										opacity: 1,
-										scale: 1,
-										x: 0,
-									}}
-									transition={{ delay: 0.3 }}
-									className="w-full h-full shadow-lg ">
-																								<Image
-																									src="/image/projects/idea2.jpg"
-										alt="Kuria"
-										layout="fill"
-										objectFit="cover"
-										placeholder="blur"
-								blurDataURL="/image/placeholder/blur.jpg"
-										objectPosition="0% 0%"
-									/>
-								</motion.div>
-							</div>
-							<div className="absolute bottom-10 md:bottom-26 right-20 h-[35%]  aspect-video grayscale hover:grayscale-0 transition-all ease duration-300 hover:scale-150">
-								<motion.div
-									initial={{
-										opacity: 0,
-										scale: 0.5,
-										x: -100,
-									}}
-									whileInView={{
-										opacity: 1,
-										scale: 1,
-										x: 0,
-									}}
-									transition={{
-										delay: 0.5,
-									}}
-									className="w-full h-full shadow-lg">
-																								<Image
-																									src="/image/projects/idea1.jpg"
-										alt="Kuria"
-										layout="fill"
-										objectFit="cover"
-										placeholder="blur"
-								blurDataURL="/image/placeholder/blur.jpg"
-									/>
-								</motion.div>
+				{highlightProject && (
+					<div className="container relative grid w-screen grid-cols-1 gap-4 px-10 mx-auto mb-10 md:grid-cols-2">
+						<div className="flex flex-col items-start justify-center mb-5 ">
+							<div className="relative w-full images aspect-square">
+								{highlightProject.images?.[0] && (
+									<div className="absolute top-28 left-10 h-[40%]  aspect-video grayscale hover:grayscale-0 transition-all ease duration-300 hover:scale-150 z-10">
+										<motion.div
+											initial={{ opacity: 0, scale: 0.5, x: 100 }}
+											whileInView={{
+												opacity: 1,
+												scale: 1,
+												x: 0,
+											}}
+											className="w-full h-full shadow-lg">
+											<Image
+												src={highlightProject.images[0]}
+												alt={highlightProject.title}
+												layout="fill"
+												objectFit="cover"
+												placeholder="blur"
+												blurDataURL="/image/placeholder/blur.jpg"
+												className="rat"
+											/>
+										</motion.div>
+									</div>
+								)}
+								{highlightProject.images?.[1] && (
+									<div className="absolute top-10 right-28 h-[30%]  aspect-video grayscale hover:grayscale-0 transition-all ease duration-300 hover:scale-150">
+										<motion.div
+											initial={{
+												opacity: 0,
+												scale: 0.5,
+												x: -100,
+											}}
+											whileInView={{
+												opacity: 1,
+												scale: 1,
+												x: 0,
+											}}
+											transition={{ delay: 0.3 }}
+											className="w-full h-full shadow-lg ">
+											<Image
+												src={highlightProject.images[1]}
+												alt={highlightProject.title}
+												layout="fill"
+												objectFit="cover"
+												placeholder="blur"
+												blurDataURL="/image/placeholder/blur.jpg"
+												objectPosition="0% 0%"
+											/>
+										</motion.div>
+									</div>
+								)}
+								{highlightProject.images?.[2] && (
+									<div className="absolute bottom-10 md:bottom-26 right-20 h-[35%]  aspect-video grayscale hover:grayscale-0 transition-all ease duration-300 hover:scale-150">
+										<motion.div
+											initial={{
+												opacity: 0,
+												scale: 0.5,
+												x: -100,
+											}}
+											whileInView={{
+												opacity: 1,
+												scale: 1,
+												x: 0,
+											}}
+											transition={{
+												delay: 0.5,
+											}}
+											className="w-full h-full shadow-lg">
+											<Image
+												src={highlightProject.images[2]}
+												alt={highlightProject.title}
+												layout="fill"
+												objectFit="cover"
+												placeholder="blur"
+												blurDataURL="/image/placeholder/blur.jpg"
+											/>
+										</motion.div>
+									</div>
+								)}
 							</div>
 						</div>
+						<motion.div
+							className="flex flex-col items-start justify-center mb-5 md:px-10"
+							initial={{
+								opacity: 0,
+								x: 200,
+							}}
+							whileInView={{
+								opacity: 1,
+								x: 0,
+							}}
+							transition={{
+								delay: 0.5,
+								type: "spring",
+							}}>
+							<h2 className="mb-3 text-2xl font-bold tracking-wider">
+								{highlightProject.title}
+							</h2>
+							{Array.isArray(highlightProject.desc) &&
+								highlightProject.desc.map((paragraph, i) => (
+									<p
+										key={i}
+										className={`text-lg text-justify text-gray-600 title ${i > 0 ? "mt-3" : ""}`}>
+										{paragraph}
+									</p>
+								))}
+							{highlightProject.preview && (
+								<div className="mt-3">
+									<Button variation="secondary">
+										<a
+											href={highlightProject.preview}
+											target="_blank"
+											rel="noopener noreferrer">
+											Preview
+										</a>
+									</Button>
+								</div>
+							)}
+						</motion.div>
 					</div>
-					<motion.div
-						className="flex flex-col items-start justify-center mb-5 md:px-10"
-						initial={{
-							opacity: 0,
-							x: 200,
-						}}
-						whileInView={{
-							opacity: 1,
-							x: 0,
-						}}
-						transition={{
-							delay: 0.5,
-							type: "spring",
-						}}>
-						<h2 className="mb-3 text-2xl font-bold tracking-wider">
-							MyIdea
-						</h2>
-						<p className="text-lg text-justify text-gray-600 title">
-						A comprehensive enterprise-level innovation management platform built for Kenya Airways, serving both internal employees and external stakeholders. Built with .NET 6.0 and Next.js, the platform enables idea submission, project tracking, real-time notifications, and analytics. Implements JWT authentication, role-based access control, and integrates with SharePoint. Successfully deployed to production with automated CI/CD pipeline.
-						</p>
-						<p className="mt-3 text-lg text-justify text-gray-600 title">
-						The platform serves over 500+ employees across multiple departments, enabling seamless collaboration and idea sharing. Built with scalability in mind using microservices architecture, the system handles high traffic loads and provides real-time updates through SignalR WebSocket connections. The frontend utilizes Next.js 13 with App Router, TypeScript, and Tailwind CSS for a modern, responsive user experience.
-						</p>
-						<p className="mt-3 text-lg text-justify text-gray-600 title">
-						Key technical achievements include implementing advanced search algorithms with Elasticsearch, setting up automated testing with 90%+ code coverage using xUnit and Jest, and establishing monitoring with Application Insights and custom dashboards. The project resulted in a 40% increase in innovation project completion rates and received recognition from senior management for its impact on organizational efficiency.
-						</p>
-						<div className="mt-3">
-							<Button variation="secondary">
-								<a
-									href="https://myidea.kenya-airways.com"
-									target="_blank"
-									rel="noopener noreferrer">
-									Preview
-								</a>
-							</Button>
-						</div>
-					</motion.div>
-				</div>
+				)}
 				<div className="flex flex-col items-center justify-start w-full pl-10 mt-16 md:pl-32">
 					<div className="flex flex-col items-center self-start justify-center my-5">
 						<Hr variant="long"></Hr>

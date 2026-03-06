@@ -33,16 +33,20 @@ const data = {
     },
     {
       "show": false,
+      "highlight": true,
       "title": "MyIdea Kenya Airways",
       "desc": [
-        "A comprehensive enterprise-level innovation management platform built for Kenya Airways, serving both internal employees and external stakeholders. Built with .NET 6.0 and Next.js, the platform enables idea submission, project tracking, real-time notifications, and analytics. Implements JWT authentication, role-based access control, and integrates with SharePoint. Successfully deployed to production with automated CI/CD pipeline."
+        "A comprehensive enterprise-level innovation management platform built for Kenya Airways, serving both internal employees and external stakeholders. Built with .NET 6.0 and Next.js, the platform enables idea submission, project tracking, real-time notifications, and analytics. Implements JWT authentication, role-based access control, and integrates with SharePoint. Successfully deployed to production with automated CI/CD pipeline.",
+        "The platform serves over 500+ employees across multiple departments, enabling seamless collaboration and idea sharing. Built with scalability in mind using microservices architecture, the system handles high traffic loads and provides real-time updates through SignalR WebSocket connections. The frontend utilizes Next.js 13 with App Router, TypeScript, and Tailwind CSS for a modern, responsive user experience.",
+        "Key technical achievements include implementing advanced search algorithms with Elasticsearch, setting up automated testing with 90%+ code coverage using xUnit and Jest, and establishing monitoring with Application Insights and custom dashboards. The project resulted in a 40% increase in innovation project completion rates and received recognition from senior management for its impact on organizational efficiency."
       ],
       "year": "2025",
       "preview": "https://myidea.kenya-airways.com",
       "thumbnail": "/image/projects/idea.jpg",
       "images": [
         "/image/projects/idea.jpg",
-        "/image/projects/idea2.jpg"
+        "/image/projects/idea2.jpg",
+        "/image/projects/idea1.jpg"
       ],
       "tech": [
         ".NET 6.0",
@@ -55,6 +59,79 @@ const data = {
       ],
       "slug": "myidea-kenya-airways",
       "category": [1, 2, 3]
+    },
+    {
+      "show": false,
+      "title": "MERN Video Call App",
+      "desc": [
+        "A full-stack video calling application built with the MERN stack. Enables real-time peer-to-peer video and audio calls in the browser using WebRTC, with signaling handled via Socket.io. Users can create or join rooms and conduct one-to-one or group-style video sessions. Deployed on Render with a Node.js/Express backend and React frontend."
+      ],
+      "year": "2025",
+      "code": "https://github.com/unlisted02/Mern-Video-Call-App",
+      "preview": "https://video-call-x7vd.onrender.com/",
+      "thumbnail": "/image/projects/video-call.png",
+      "images": [
+        "/image/projects/video-call.png"
+      ],
+      "tech": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Socket.io",
+        "WebRTC",
+        "Render"
+      ],
+      "slug": "mern-video-call-app",
+      "category": [1]
+    },
+    {
+      "show": false,
+      "title": "Real-Time Chat App",
+      "desc": [
+        "A full-stack real-time chat application with Socket.io. Features instant 1:1 messaging, JWT authentication with bcrypt, and persistent messages in MongoDB. Supports per-message actions: edit, reply, forward, copy, star, pin, and delete (with edit constraints: sender-only, within 1 hour, and only while unseen). Includes WhatsApp-style reply UI, file and image attachments via Cloudinary, global and in-chat search, unread badges, starred messages overview, and emoji picker. Built with React, Node.js, Express, and MongoDB; deployed on Render."
+      ],
+      "year": "2025",
+      "code": "https://github.com/unlisted02/chat-app",
+      "preview": "https://chat-app-ojte.onrender.com/",
+      "thumbnail": "/image/projects/chat-app.png",
+      "images": [
+        "/image/projects/chat-app.png"
+      ],
+      "tech": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.io",
+        "JWT",
+        "bcrypt",
+        "Cloudinary",
+        "Render"
+      ],
+      "slug": "chat-app",
+      "category": [1]
+    },
+    {
+      "show": false,
+      "title": "WhatsApp Sticker Bot",
+      "desc": [
+        "A WhatsApp bot built with Node.js and Baileys that converts images and short videos into stickers. Supports commands: .ping (replies PONG), .help (help menu), and .sticker (send an image or short video with caption .sticker to receive a sticker). Uses FFmpeg for video-to-sticker conversion, with session auth stored locally. Lightweight logging with pino. Designed for personal automation and sticker creation from media."
+      ],
+      "year": "2025",
+      "code": "https://github.com/unlisted02/whatsapp-bot",
+      "thumbnail": "/image/projects/whatsapp-bot.png",
+      "images": [
+        "/image/projects/whatsapp-bot.png"
+      ],
+      "tech": [
+        "Node.js",
+        "Baileys",
+        "FFmpeg",
+        "WhatsApp Web API"
+      ],
+      "slug": "whatsapp-bot",
+      "category": [1, 9]
     },
     {
       "show": true,
