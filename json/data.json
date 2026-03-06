@@ -29,15 +29,20 @@
     },
     {
       "show": false,
+      "highlight": true,
       "title": "MyIdea Kenya Airways",
       "desc": [
-        "A comprehensive enterprise-level innovation management platform built for Kenya Airways, serving both internal employees and external stakeholders. Built with .NET 6.0 and Next.js, the platform enables idea submission, project tracking, real-time notifications, and analytics. Implements JWT authentication, role-based access control, and integrates with SharePoint. Successfully deployed to production with automated CI/CD pipeline."],
+        "A comprehensive enterprise-level innovation management platform built for Kenya Airways, serving both internal employees and external stakeholders. Built with .NET 6.0 and Next.js, the platform enables idea submission, project tracking, real-time notifications, and analytics. Implements JWT authentication, role-based access control, and integrates with SharePoint. Successfully deployed to production with automated CI/CD pipeline.",
+        "The platform serves over 500+ employees across multiple departments, enabling seamless collaboration and idea sharing. Built with scalability in mind using microservices architecture, the system handles high traffic loads and provides real-time updates through SignalR WebSocket connections. The frontend utilizes Next.js 13 with App Router, TypeScript, and Tailwind CSS for a modern, responsive user experience.",
+        "Key technical achievements include implementing advanced search algorithms with Elasticsearch, setting up automated testing with 90%+ code coverage using xUnit and Jest, and establishing monitoring with Application Insights and custom dashboards. The project resulted in a 40% increase in innovation project completion rates and received recognition from senior management for its impact on organizational efficiency."
+      ],
       "year": "2025",
       "preview": "https://myidea.kenya-airways.com",
       "thumbnail": "/image/projects/idea.jpg",
       "images": [
         "/image/projects/idea.jpg",
-        "/image/projects/idea2.jpg"
+        "/image/projects/idea2.jpg",
+        "/image/projects/idea1.jpg"
       ],
       "tech": [
         ".NET 6.0",
@@ -51,7 +56,83 @@
       "slug": "myidea-kenya-airways",
       "category": [1, 2, 3]
     },
-
+    {
+      "show": true,
+      "title": "MERN Video Call App",
+      "desc": [
+        "MERN Video Call App is a full‑stack 1‑on‑1 interview and practice platform built with the MERN stack (MongoDB, Express, React, Node.js). The frontend uses React 19 with Vite 7, Tailwind CSS, and DaisyUI, and integrates Clerk for auth, Stream Video SDK for real‑time video calls, and Stream Chat for messaging. Users can create and join video rooms, chat in real time, and use a Monaco-based coding panel for a VS Code–like coding experience. Session state and recent sessions are stored in MongoDB and exposed via a REST API."
+      ],
+      "year": "2026",
+      "code": "https://github.com/unlisted02/Mern-Video-Call-App",
+      "preview": "https://video-call-x7vd.onrender.com/",
+      "thumbnail": "/image/projects/videoDash.png",
+      "images": [
+        "/image/projects/videoDash.png",
+        "/image/projects/userDash.png",
+        "/image/projects/problems.png"
+      ],
+      "tech": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Socket.io",
+        "WebRTC",
+        "Render"
+      ],
+      "slug": "mern-video-call-app",
+      "category": [1]
+    },
+    {
+      "show": true,
+      "title": "Real-Time Chat App",
+      "desc": [
+        "Full-stack real-time chat app built with the MERN stack and Socket.io for instant messaging. It includes JWT-based authentication with bcrypt, persistent message storage in MongoDB, and a React frontend with a WhatsApp-style UI. Users can send text and attachments (images and documents via Cloudinary), and each message supports edit, reply, forward, star, pin, copy, and delete. The app also has global and in-chat search, per-chat unread badges, a starred-messages view, URL auto-linking and an emoji picker. The backend exposes REST APIs for auth and chat data and uses Socket.io for real-time delivery and presence. The frontend uses React with state management (e.g. Zustand) for chats, modals, and UI state."
+      ],
+      "year": "2026",
+      "code": "https://github.com/unlisted02/chat-app",
+      "preview": "https://chat-app-ojte.onrender.com/",
+      "thumbnail": "/image/projects/chatDash.png",
+      "images": [
+        "/image/projects/chatDash.png",
+        "/image/projects/chat.png",
+        "/image/projects/profile.png"
+      ],
+      "tech": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Socket.io",
+        "JWT",
+        "bcrypt",
+        "Cloudinary",
+        "Render"
+      ],
+      "slug": "chat-app",
+      "category": [1]
+    },
+    {
+      "show": false,
+      "title": "WhatsApp Sticker Bot",
+      "desc": [
+        "A WhatsApp bot built with Node.js and Baileys that converts images and short videos into stickers. Supports commands: .ping (replies PONG), .help (help menu), and .sticker (send an image or short video with caption .sticker to receive a sticker). Uses FFmpeg for video-to-sticker conversion, with session auth stored locally. Lightweight logging with pino. Designed for personal automation and sticker creation from media."
+      ],
+      "year": "2026",
+      "code": "https://github.com/unlisted02/whatsapp-bot",
+      "thumbnail": "/image/projects/whatsapp-bot.png",
+      "images": [
+        "/image/projects/whatsapp-bot.png"
+      ],
+      "tech": [
+        "Node.js",
+        "Baileys",
+        "FFmpeg",
+        "WhatsApp Web API"
+      ],
+      "slug": "whatsapp-bot",
+      "category": [1, 9]
+    },
     {
       "show": true,
       "title": "Smart Home Safety System",
@@ -100,7 +181,7 @@
       "category": [1, 2]
     },
     {
-      "show": true,
+      "show": false,
       "title": "E-Learning Platform",
       "desc": [
         "The project involves the creation of an e-learning website using HTML, CSS, Bootstrap 5, and JavaScript. The website aims to provide a user-friendly and responsive platform for learners to access educational content. Unlisted Academy creates an interactive and visually appealing learning experience."],
@@ -123,7 +204,7 @@
       "category": [1]
     },
     {
-      "show": true,
+      "show": false,
       "title": "Adventure Tourism Website",
       "desc": [
         "A responsive single-page tourism website called \"ADVENTURE\" that showcases African travel experiences, upcoming events, tours, and a contact form. It is built as a static site using pure HTML, CSS, and vanilla JavaScript with jQuery, featuring dark mode toggle, mobile navigation menu, smooth scrolling, an image carousel, and a scroll-to-top button."

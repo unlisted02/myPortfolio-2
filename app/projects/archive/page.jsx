@@ -10,7 +10,9 @@ import Projects from "@/json/data.json";
 import Link from "next/link";
 
 export default function Page() {
-	const projects = Projects.Projects;
+	const projects = [...Projects.Projects].sort(
+		(a, b) => Number(b.year) - Number(a.year)
+	);
 	return (
 		<>
 			<main className="overflow-hidden">
@@ -94,7 +96,11 @@ export default function Page() {
 										<td>
 											<div className="flex flex-row justify-center items-center">
 												{project.code && (
-													<a href={project.code} title="Link to GitHub">
+													<a
+														href={project.code}
+														title="Link to GitHub"
+														target="_blank"
+														rel="noopener noreferrer">
 														<FontAwesomeIcon
 															icon={faGithub}
 															className="text-xl mr-2"
@@ -104,7 +110,9 @@ export default function Page() {
 												{project.preview && (
 													<a
 														href={project.preview}
-														title="Link to project preview">
+														title="Link to project preview"
+														target="_blank"
+														rel="noopener noreferrer">
 														<FontAwesomeIcon
 															icon={faArrowUpRightFromSquare}
 															className="text-xl"
