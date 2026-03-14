@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import "./nprogress.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import ClientTopProgressBar from "@/components/ClientTopProgressBar";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
 				{children}
 				<ScrollToTop />
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
