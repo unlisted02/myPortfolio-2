@@ -30,7 +30,6 @@ const MyPage = () => {
 						<div className="section">
 							<HomeSection />
 						</div>
-						
 						<div className="section">
 							<AboutPreviewSection />
 						</div>

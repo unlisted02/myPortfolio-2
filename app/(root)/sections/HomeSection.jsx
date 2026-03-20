@@ -1,70 +1,43 @@
 "use client";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Button from "@/components/Button";
 
 export default function HomeSection() {
 	return (
 		<div className="container grid grid-cols-1 gap-4 p-10 mx-auto overflow-hidden md:grid-cols-3 md:px-20">
+			{/* Left: text content — single motion wrapper, animate (not whileInView) since this is always visible */}
 			<motion.div
 				className="flex flex-col items-center justify-center col-span-2 text-center md:items-start md:text-start"
-				initial={{ x: -100, opacity: 0 }}
-				whileInView={{ x: 0, opacity: 1 }}
-				transition={{
-					type: "spring",
-				}}>
+				initial={{ x: -60, opacity: 0 }}
+				animate={{ x: 0, opacity: 1 }}
+				transition={{ type: "spring", stiffness: 80, damping: 20 }}>
+				{/* Mobile portrait — only renders on small screens */}
 				<div className="block col-span-1 mx-auto my-10 md:hidden">
 					<div className="transition-all duration-300 rounded-full bg-slate-500 h-60 w-60 grayscale hover:grayscale-0 ease">
 						<Image
-							src="/image/Kuria.png"
-							width={500}
-							height={500}
+							src="/image/grad2.jpg"
+							width={240}
+							height={240}
 							priority
-							className="object-cover w-full h-full rounded-full "
-							alt="Kuria"
+							className="object-cover w-full h-full rounded-full"
+							alt="Michael Kuria"
 							placeholder="blur"
 							blurDataURL="/image/placeholder/blur.jpg"
 						/>
 					</div>
 				</div>
-				<motion.h3
-					className="uppercase text-xl mb-3 font-bold text tracking-[.5rem] text-gray-500"
-					initial={{ x: -100, opacity: 0 }}
-					whileInView={{ x: 0, opacity: 1 }}
-					transition={{
-						delay: 0.2,
-						type: "spring",
-					}}>
+
+				<h3 className="uppercase text-xl mb-3 font-bold tracking-[.5rem] text-gray-500">
 					Michael Kuria
-				</motion.h3>
-				<motion.h1
-					className="my-2 text-5xl font-bold text-black md:text-6xl lg:text-7xl 2xl:text-8xl md:my-5"
-					initial={{ x: -100, opacity: 0 }}
-					whileInView={{ x: 0, opacity: 1 }}
-					transition={{
-						delay: 0.3,
-						type: "spring",
-					}}>
+				</h3>
+				<h1 className="my-2 text-5xl font-bold text-black md:text-6xl lg:text-7xl 2xl:text-8xl md:my-5">
 					Software Engineer
-				</motion.h1>
-				<motion.p
-					className="mb-4 text-lg font-medium text-gray-600"
-					initial={{ x: -100, opacity: 0 }}
-					whileInView={{ x: 0, opacity: 1 }}
-					transition={{
-						delay: 0.4,
-						type: "spring",
-					}}>
+				</h1>
+				<p className="mb-4 text-lg font-medium text-gray-600">
 					🚀 Building the future with code • Available for opportunities
-				</motion.p>
-				<motion.div
-					className="mt-4"
-					initial={{ x: -100, opacity: 0 }}
-					whileInView={{ x: 0, opacity: 1 }}
-					transition={{
-						delay: 0.4,
-						type: "spring",
-					}}>
+				</p>
+				<div className="mt-4">
 					<p className="title text-md 2xl:text-xl tracking-wider text-gray-500 leading-[1.7rem] mb-3">
 						Hi! I&apos;m Kuria, a passionate software engineer with 4+ years of
 						experience building scalable software applications and AI-powered
@@ -80,15 +53,8 @@ export default function HomeSection() {
 						models, LLM integration, and building the next generation of
 						intelligent applications.
 					</p>
-				</motion.div>
-				<motion.div
-					className="flex flex-row items-center justify-center mt-10 space-x-4 buttons"
-					initial={{ x: -100, opacity: 0 }}
-					whileInView={{ x: 0, opacity: 1 }}
-					transition={{
-						delay: 0.5,
-						type: "spring",
-					}}>
+				</div>
+				<div className="flex flex-row items-center justify-center mt-10 space-x-4 buttons">
 					<Button variation="primary">
 						<a
 							href="https://drive.google.com/file/d/1kB94VEqG4GSwn1LWhWrFGxNDseYPB2PV/view?usp=sharing"
@@ -102,16 +68,15 @@ export default function HomeSection() {
 					<Button variation="secondary">
 						<a href="#contact">Contact Me</a>
 					</Button>
-				</motion.div>
+				</div>
 			</motion.div>
+
+			{/* Right: desktop portrait — hidden on mobile */}
 			<motion.div
-				className="items-center justify-center hidden col-span-1 mx-auto md:flex "
-				initial={{ x: 100, opacity: 0 }}
-				whileInView={{ x: 0, opacity: 1 }}
-				transition={{
-					delay: 0.7,
-					type: "spring",
-				}}>
+				className="items-center justify-center hidden col-span-1 mx-auto md:flex"
+				initial={{ x: 60, opacity: 0 }}
+				animate={{ x: 0, opacity: 1 }}
+				transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.3 }}>
 				<div className="w-auto h-auto transition-all duration-300 rounded-full lg:px-12 grayscale hover:grayscale-0 ease">
 					<Image
 						src="/image/grad2.jpg"
@@ -120,7 +85,7 @@ export default function HomeSection() {
 						priority
 						placeholder="blur"
 						blurDataURL="/image/placeholder/blur.jpg"
-						alt="Kuria"
+						alt="Michael Kuria"
 						className="object-cover w-full h-full rounded-full"
 					/>
 				</div>

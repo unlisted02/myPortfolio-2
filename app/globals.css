@@ -100,3 +100,24 @@ a[title]:hover:after {
 	background: #333333;
 	color: #fff;
 }
+
+/* ─── Section enter animations (triggered by fullpage.js .active class) ─── */
+.fp-animate {
+	opacity: 0;
+	transition: opacity 0.6s ease, transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.fp-from-right  { transform: translateX(80px); }
+.fp-from-left   { transform: translateX(-80px); }
+.fp-from-bottom { transform: translateY(40px); }
+
+.section.active .fp-animate {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+.fp-delay-1 { transition-delay: 0.1s; }
+.fp-delay-2 { transition-delay: 0.2s; }
+.fp-delay-3 { transition-delay: 0.3s; }
+.fp-delay-4 { transition-delay: 0.4s; }
+.fp-delay-5 { transition-delay: 0.5s; }
+.fp-delay-6 { transition-delay: 0.6s; }

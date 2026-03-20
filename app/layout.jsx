@@ -10,6 +10,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import ClientTopProgressBar from "@/components/ClientTopProgressBar";
 import ScrollToTop from "@/components/ScrollToTop";
 
+export const viewport = {
+    width: "device-width",
+    initialScale: 1,
+};
+
 export const metadata = {
     title: "Michael Kuria | Software Engineer",
     description: "Passionate software engineer with 4+ years of experience building scalable web applications and AI-powered solutions. Specializing in modern web technologies, React, Next.js, and machine learning.",
@@ -18,7 +23,6 @@ export const metadata = {
     siteUrl: "https://kuria-portfolio.vercel.app",
     applicationName: "Michael Kuria Portfolio",
     robots: "index, follow",
-    viewport: "width=device-width, initial-scale=1",
     
     openGraph: {
 		type: "website",
