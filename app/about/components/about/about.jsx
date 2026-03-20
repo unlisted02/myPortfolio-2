@@ -45,6 +45,7 @@ export default function About() {
 									alt="Kuria"
 									layout="fill"
 									objectFit="cover"
+									sizes="(max-width: 768px) 50vw, 25vw"
 									placeholder="blur"
 									blurDataURL="/image/placeholder/blur.jpg"
 								/>
@@ -69,6 +70,7 @@ export default function About() {
 									alt="Kuria"
 									layout="fill"
 									objectFit="cover"
+									sizes="(max-width: 768px) 30vw, 15vw"
 									placeholder="blur"
 									blurDataURL="/image/placeholder/blur.jpg"
 								/>
@@ -95,6 +97,7 @@ export default function About() {
 									alt="Kuria"
 									layout="fill"
 									objectFit="cover"
+									sizes="(max-width: 768px) 40vw, 20vw"
 									placeholder="blur"
 									blurDataURL="/image/placeholder/blur.jpg"
 								/>

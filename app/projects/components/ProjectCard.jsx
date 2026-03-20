@@ -27,6 +27,7 @@ export default function ProjectCard({ project, index, activeCategory }) {
 							alt="Kuria"
 							layout="fill"
 							objectFit="cover"
+							sizes="(max-width: 768px) 100vw, 50vw"
 							placeholder="blur"
 							className="bg-slate-950 opacity-10  group-hover/tes:opacity-100 transition-all ease duration-500"
 							blurDataURL="/image/placeholder/blur.jpg"

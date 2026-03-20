@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, use } from "react";
+import { useState, use } from "react";
 import { motion } from "framer-motion";
 import jsonData from "@/json/data.json";
 
@@ -56,48 +56,15 @@ function ScrollDownButton() {
 
 function Page(props) {
     const params = use(props.params);
-    const [data, setData] = useState(null);
-    useEffect(() => {
-		const selectedData = jsonData.Projects.find(
-			(item) => item.slug === params.slug
-		);
-		if (selectedData === undefined) {
-			setData("404");
-		} else {
-			setData(selectedData);
-		}
-	}, [params.slug]);
+    const [data] = useState(() =>
+		jsonData.Projects.find((item) => item.slug === params.slug) || "404"
+	);
 
     if (data === "404") {
 		return (
 			<>
 				<NotFound />
 			</>
-		);
-	} else if (!data) {
-		return (
-			<div className="relative min-h-screen w-full  gap-4 p-10 flex justify-center items-center flex-col mb-10 ">
-				<div className="min-h-screen flex justify-center items-center w-full">
-					<div className="mx-auto grid grid-cols-1 md:grid-cols-2  w-full">
-						<div className="flex justify-center items-start flex-col mb-5 space-y-10 w-ful p-4">
-							<div className="animate-pulse bg-neutral-400 h-20 w-full rounded shadow-lg"></div>
-							<div className="animate-pulse bg-neutral-400 h-20 w-full rounded shadow-lg"></div>
-							<div className="animate-pulse bg-neutral-400 h-20 w-full rounded shadow-lg"></div>
-							<div className="animate-pulse bg-neutral-400 h-20 w-full rounded shadow-lg"></div>
-							<div className="animate-pulse bg-neutral-400 h-20 w-full rounded shadow-lg"></div>
-						</div>
-						<div className="flex justify-start items-start flex-col mb-5 w-full p-4">
-							<div className="animate-pulse duration-500 shadow-lg bg-neutral-400 rounded  w-full h-full "></div>
-						</div>
-					</div>
-				</div>
-				{/* images */}
-				<div className="mx-auto grid grid-cols-1 p-5 md:p-20  w-full h-auto">
-					<div className="w-full h-auto aspect-video">
-						<div className="animate-pulse duration-500 shadow-lg bg-neutral-400 h-full w-full rounded"></div>
-					</div>
-				</div>
-			</div>
 		);
 	}
     return (
@@ -201,8 +168,9 @@ function Page(props) {
 							width={1920}
 							height={1080}
 							blurDataURL="/image/placeholder/blur.jpg"
-							layout="responsive"
-							objectFit="contain"
+							sizes="(max-width: 768px) 100vw, 80vw"
+							style={{ objectFit: "contain" }}
+							loading={index === 0 ? "eager" : "lazy"}
 						/>
 					))}
 				</div>

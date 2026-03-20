@@ -1,8 +1,7 @@
 "use client";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Button from "@/components/Button";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import FixedButton from "@/components/FixedButton";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,10 +17,6 @@ import Hr from "@/components/Hr";
 import About from "./components/about/about.jsx";
 
 export default function Page() {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
-
 	return (
 		<>
 			<main className="overflow-hidden">
@@ -42,8 +37,10 @@ export default function Page() {
 							<Image
 								src="/image/meImage.jpg"
 								alt="Kuria"
-								layout="fill"
-								objectFit="cover"
+								fill
+								sizes="(max-width: 768px) 80vw, 30vw"
+								priority
+								style={{ objectFit: "cover" }}
 								placeholder="blur"
 								blurDataURL="/image/placeholder/blur.jpg"
 							/>
