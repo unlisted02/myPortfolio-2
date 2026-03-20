@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Button from "@/components/Button";
@@ -25,10 +25,6 @@ export default function Page() {
 	const projects = Projects.Projects.filter((item) => item.show === true)
 		.sort((a, b) => Number(b.year) - Number(a.year));
 	const highlightProject = Projects.Projects.find((p) => p.highlight === true);
-
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
 	return (
 		<>
 			<main className="overflow-hidden">
@@ -47,6 +43,8 @@ export default function Page() {
 								alt="Kuria"
 								layout="fill"
 								objectFit="cover"
+								priority
+								sizes="(max-width: 768px) 80vw, 30vw"
 								placeholder="blur"
 								blurDataURL="/image/placeholder/blur.jpg"
 							/>
@@ -104,6 +102,7 @@ export default function Page() {
 												alt={highlightProject.title}
 												layout="fill"
 												objectFit="cover"
+												sizes="(max-width: 768px) 70vw, 35vw"
 												placeholder="blur"
 												blurDataURL="/image/placeholder/blur.jpg"
 												className="rat"
@@ -131,6 +130,7 @@ export default function Page() {
 												alt={highlightProject.title}
 												layout="fill"
 												objectFit="cover"
+												sizes="(max-width: 768px) 60vw, 30vw"
 												placeholder="blur"
 												blurDataURL="/image/placeholder/blur.jpg"
 												objectPosition="0% 0%"
@@ -160,6 +160,7 @@ export default function Page() {
 												alt={highlightProject.title}
 												layout="fill"
 												objectFit="cover"
+												sizes="(max-width: 768px) 60vw, 30vw"
 												placeholder="blur"
 												blurDataURL="/image/placeholder/blur.jpg"
 											/>

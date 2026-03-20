@@ -12,7 +12,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
     title: "Michael Kuria | Software Engineer",
-    description: "Passionate software engineer with 3+ years of experience building scalable web applications and AI-powered solutions. Specializing in modern web technologies, React, Next.js, and machine learning.",
+    description: "Passionate software engineer with 4+ years of experience building scalable web applications and AI-powered solutions. Specializing in modern web technologies, React, Next.js, and machine learning.",
     keywords: ["Michael Kuria", "Software Engineer", "Full Stack Developer", "Web Developer", "AI Developer", "React", "Next.js", "JavaScript", "Python", "Machine Learning", "Portfolio"],
     author: "Michael Kuria",
     siteUrl: "https://kuria-portfolio.vercel.app",
