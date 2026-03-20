@@ -1,18 +1,17 @@
 "use client";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Button from "@/components/Button";
 import Image from "next/image";
-
-// images - using string paths instead of imports
-
 import Hr from "@/components/Hr";
-import ProjectCard from "./components/ProjectCard";
 import Projects from "@/json/data.json";
-import FixedButon from "@/components/FixedButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+
+const ProjectCard = dynamic(() => import("./components/ProjectCard"), { ssr: false });
+const FixedButon = dynamic(() => import("@/components/FixedButton"), { ssr: false });
 
 const category = {
 	1: "Web Development",
