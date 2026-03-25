@@ -6,8 +6,8 @@ import Hr from "@/components/Hr";
 
 export default function AboutPreviewSection() {
 	return (
-		<div className="relative flex flex-col items-center justify-center w-screen h-screen gap-4 overflow-hidden">
-			<div className="z-0 md:mb-0 md:absolute top-1/4 md:right-[10%] md:-translate-y-16">
+		<div className="relative flex flex-col items-center justify-center w-screen gap-4 p-10 overflow-hidden md:h-screen">
+			<div className="z-0 mb-48 md:mb-0 md:absolute top-1/4 md:right-[10%] md:-translate-y-16">
 				<div className="relative bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 fp-animate fp-from-right fp-delay-5">
 					<Image
 						src="/image/mike.jpg"

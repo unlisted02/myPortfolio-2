@@ -39,7 +39,9 @@ export default function HomeSection() {
 				</p>
 				<div className="mt-4">
 					<p className="title text-md 2xl:text-xl tracking-wider text-gray-500 leading-[1.7rem] mb-3">
-						Hi! I&apos;m Kuria, a passionate software engineer with 4+ years of
+						Hi! I&apos;m Kuria, a passionate software engineer with
+						<span className="font-semibold text-gray-700"> 4+</span>{" "}
+						years of
 						experience building scalable software applications and AI-powered
 						solutions. I&apos;ve successfully delivered{" "}
 						<span className="font-semibold text-gray-700"> 15+ projects</span>{" "}
