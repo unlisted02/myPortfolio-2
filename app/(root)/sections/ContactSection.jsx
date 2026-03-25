@@ -70,7 +70,7 @@ export default function ContactSection() {
 						questions or just want to say hi.
 					</span>
 				</p>
-				<p className="title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5 fp-animate fp-from-left fp-delay-3">
+				<p className="title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5 fp-animate fp-from-left fp-delay-3 font-semibold">
 					<a href="mailto:kuriamichael463@gmail.com?subject=Hello&body=Hello Kuria,">
 						kuriamichael463@gmail.com
 					</a>

@@ -23,10 +23,10 @@ export default function Page() {
 				<FixedButton href="/#about">
 					<FontAwesomeIcon
 						icon={faChevronLeft}
-						className="text-black pr-10"
+						className="pr-10 text-black"
 					/>
 				</FixedButton>
-				<div className="relative h-screen  gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden">
+				<div className="relative flex flex-col items-center justify-center h-screen gap-4 p-10 mb-10 overflow-hidden">
 					{/* hero */}
 					<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 						<motion.div
@@ -47,13 +47,13 @@ export default function Page() {
 						</motion.div>
 					</div>
 					<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 pt-4 backdrop-filter backdrop-blur-sm md:backdrop-blur-none bg-gray-100 bg-opacity-50 md:bg-transparent md:pt-0">
-						<h1 className="md:bg-white bg-transparent lg:bg-transparent bg-opacity-50 md:px-0 text-black text-5xl md:text-8xl font-bold">
+						<h1 className="text-5xl font-bold text-black bg-transparent bg-opacity-50 md:bg-white lg:bg-transparent md:px-0 md:text-8xl">
 							About Me
 						</h1>
 						<Hr />
 						<p className="title text-xl mt-4 tracking-wider text-gray-900 leading-[1.7rem] mb-5 ">
 							A brief introduction about me and{" "}
-							<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
+							<span className="bg-transparent bg-opacity-50 md:bg-gray-100 xl:bg-transparent">
 								{" "}
 								my interest.
 							</span>
