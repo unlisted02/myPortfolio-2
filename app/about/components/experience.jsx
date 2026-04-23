@@ -72,7 +72,7 @@ const experiences = [
 		endDate: "Present",
 		company: "Kenya Airways",
 		position: "Software Engineer",
-		type: "Internship",
+		type: "Contract",
 		location: "Nairobi, Kenya",
 		description:
 			"Developed and maintained current internal web applications using Next.js & and .NET. Fixed bugs and implemented new features to enhance user experience. Collaborated with the team to ensure smooth deployment and functionality of applications.",
@@ -92,11 +92,11 @@ experiences.reverse();
 
 function Title() {
 	return (
-		<div className="mt-16 flex flex-col justify-start items-center w-full pl-10 md:pl-32">
-			<div className="flex justify-center items-center flex-col my-5 self-start">
+		<div className="flex flex-col items-center justify-start w-full pl-10 mt-16 md:pl-32">
+			<div className="flex flex-col items-center self-start justify-center my-5">
 				<Hr variant="long"></Hr>
 				<motion.h1
-					className="text-3xl font-bold mt-3"
+					className="mt-3 text-3xl font-bold"
 					initial={{
 						opacity: 0,
 						x: -200,
@@ -127,7 +127,7 @@ function TimelineCard({ experience, index, isEven }) {
 					? "md:justify-center md:translate-x-68"
 					: "md:justify-center md:-translate-x-68"
 			} justify-center mb-4`}>
-			<div className="bg-gradient-to-r from-black to-gray-800 text-white px-12 py-3 rounded-xl shadow-lg border border-gray-600 min-w-max">
+			<div className="px-12 py-3 text-white border border-gray-600 shadow-lg bg-gradient-to-r from-black to-gray-800 rounded-xl min-w-max">
 				<div className="flex items-center justify-center gap-6">
 					<div className="text-center">
 						<div className="text-sm font-bold">{experience.startDate}</div>
@@ -166,19 +166,19 @@ function ExperienceCard({ experience, index, isEven }) {
 				hover:shadow-xl hover:bg-white/30 transition-all duration-300 ml-12 md:ml-0`}>
 				{/* Company & Position */}
 				<div className="mb-4">
-					<h3 className="font-bold text-xl text-black mb-1">
+					<h3 className="mb-1 text-xl font-bold text-black">
 						{experience.company}
 					</h3>
-					<h4 className="font-medium text-lg text-gray-700">
+					<h4 className="text-lg font-medium text-gray-700">
 						{experience.position}
-						<span className="text-sm font-normal text-gray-500 ml-2">
+						<span className="ml-2 text-sm font-normal text-gray-500">
 							• {experience.type}
 						</span>
 					</h4>
 				</div>
 
 				{/* Description */}
-				<p className="text-gray-600 text-justify leading-relaxed mb-4">
+				<p className="mb-4 leading-relaxed text-justify text-gray-600">
 					{experience.description}
 				</p>
 
@@ -187,7 +187,7 @@ function ExperienceCard({ experience, index, isEven }) {
 					{experience.skills.map((skill, idx) => (
 						<span
 							key={idx}
-							className="bg-gray-200/60 hover:bg-gray-300/60 border border-gray-400/40 text-black px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:scale-105">
+							className="px-3 py-1 text-sm font-medium text-black transition-all duration-300 border rounded-full bg-gray-200/60 hover:bg-gray-300/60 border-gray-400/40 backdrop-blur-sm hover:scale-105">
 							{skill}
 						</span>
 					))}
@@ -199,9 +199,9 @@ function ExperienceCard({ experience, index, isEven }) {
 
 function Wrapper({ children }) {
 	return (
-		<div className="mx-auto container px-6 py-10">
+		<div className="container px-6 py-10 mx-auto">
 			<div
-				className="flex justify-center items-center flex-col">
+				className="flex flex-col items-center justify-center">
 				{children}
 			</div>
 		</div>
@@ -220,11 +220,11 @@ export default function Experience() {
 				<div className="relative w-full max-w-6xl mx-auto">
 					{" "}
 					{/* Timeline line - hidden on mobile, visible on md+ */}
-					<div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-black via-gray-400 to-transparent h-full"></div>
+					<div className="absolute hidden w-1 h-full transform -translate-x-1/2 md:block left-1/2 bg-gradient-to-b from-black via-gray-400 to-transparent"></div>
 					{/* Mobile timeline line */}
-					<div className="md:hidden absolute left-0 w-1 bg-gradient-to-b from-black via-gray-400 to-transparent h-full"></div>{" "}
+					<div className="absolute left-0 w-1 h-full md:hidden bg-gradient-to-b from-black via-gray-400 to-transparent"></div>{" "}
 					{/* Experience cards */}
-					<div className="space-y-12 md:space-y-16 relative">
+					<div className="relative space-y-12 md:space-y-16">
 						<AnimatePresence>
 							{displayedExperiences.map((experience, index) => (
 								<div key={experience.id} className="relative">
@@ -261,8 +261,7 @@ export default function Experience() {
 							transition={{ delay: 0.5 }}>
 							<button
 								onClick={() => setShowAll(!showAll)}
-								className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full font-medium 
-									transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2">
+								className="flex items-center gap-2 px-8 py-3 font-medium text-white transition-all duration-300 bg-black rounded-full shadow-lg hover:bg-gray-800 hover:scale-105">
 								{showAll ? (
 									<>
 										Show Less
@@ -301,7 +300,7 @@ export default function Experience() {
 					)}{" "}
 					{/* Gradient fade effect at bottom */}
 					{!showAll && (
-						<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-stale-300 to-transparent pointer-events-none"></div>
+						<div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none bg-gradient-to-t from-stale-300 to-transparent"></div>
 					)}
 				</div>
 			</Wrapper>
