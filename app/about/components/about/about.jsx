@@ -103,6 +103,34 @@ export default function About() {
 								/>
 							</motion.div>
 						</div>
+						<div className="absolute bottom-10 left-7 w-[34%] aspect-square grayscale hover:grayscale-0 transition-all ease duration-300 z-10">
+							<motion.div
+								initial={{
+									opacity: 0,
+									scale: 0.5,
+									y: 80,
+								}}
+								whileInView={{
+									opacity: 1,
+									scale: 1,
+									y: 0,
+								}}
+								transition={{
+									delay: 0.65,
+								}}
+								className="relative w-full h-full">
+								<Image
+									src="/image/GodIs.jpeg"
+									alt="Michael Kuria speaking at an event"
+									fill
+									className="object-cover"
+									sizes="(max-width: 768px) 32vw, 16vw"
+									placeholder="blur"
+									blurDataURL="/image/placeholder/blur.jpg"
+									unoptimized={process.env.NODE_ENV === "development"}
+								/>
+							</motion.div>
+						</div>
 					</div>
 				</div>
 				<motion.div
