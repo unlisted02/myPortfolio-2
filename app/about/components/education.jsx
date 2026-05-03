@@ -197,6 +197,13 @@ export default function Education() {
 								<h3 className="text-lg font-semibold text-gray-800">Certifications & Skills</h3>
 							</div>
 							<div className="grid grid-cols-1 gap-3">
+							<div className="p-4 border-l-4 border-yellow-500 rounded-lg bg-gradient-to-r from-green-50 to-yellow-50">
+									<div className="flex items-start justify-between mb-2">
+										<span className="font-medium text-gray-800">Understand ASP.NET Core fundamentals</span>
+										<span className="text-sm text-gray-500">2026</span>
+									</div>
+									<p className="text-sm text-gray-600">Microsoft Learn</p>
+								</div>
 							<div className="p-4 border-l-4 border-purple-500 rounded-lg bg-gradient-to-r from-blue-50 to-pink-50">
 								<div className="flex items-start justify-between mb-2">
 									<span className="font-medium text-gray-800">Learning Kubernetes</span>
