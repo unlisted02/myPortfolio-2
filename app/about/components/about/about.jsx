@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 // images - using string paths instead of imports
 import Hr from "@/components/Hr";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faChessKnight, faPlane, faSkating } from "@fortawesome/free-solid-svg-icons";
+import { faChessKnight, faPersonHiking, faPlane, faSkating } from "@fortawesome/free-solid-svg-icons";
 
 function Title() {
 	return (
@@ -41,7 +41,7 @@ export default function About() {
 								}}
 								className="w-full h-full">
 								<Image
-									src="/image/view1.jpg"
+									src="/image/hiking.jpg"
 									alt="Kuria"
 									layout="fill"
 									objectFit="cover"
@@ -185,19 +185,19 @@ export default function About() {
 						Apart from coding, some other activities that I love to do!
 					</p>
 					<div className="flex flex-col mt-3 space-y-3">
-						<div className="flex items-center space-x-3">
-							<FontAwesomeIcon 
-								icon={faBookOpen} 
-								className="text-xl text-blue-600" 
-							/>
-							<span className="text-lg text-gray-600 title">Reading Tech Blogs and Books</span>
-						</div>
-						<div className="flex items-center space-x-3">
+					<div className="flex items-center space-x-3">
 							<FontAwesomeIcon 
 								icon={faChessKnight} 
 								className="text-xl text-green-600" 
 							/>
 							<span className="text-lg text-gray-600 title">Playing Chess</span>
+						</div>
+						<div className="flex items-center space-x-3">
+							<FontAwesomeIcon 
+								icon={faPersonHiking} 
+								className="text-xl text-blue-600" 
+							/>
+							<span className="text-lg text-gray-600 title">Hiking</span>
 						</div>
 						<div className="flex items-center space-x-3">
 							<FontAwesomeIcon 
